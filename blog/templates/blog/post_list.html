@@ -11,6 +11,15 @@
         <h1>hwanjun's blog 소개</h1>
         <p>이 곳은 환준's 개인공간 입니다</p>
     </div>
+    {% for post in posts %}
+        <div>
+            <h3>author: {{ post.author }}</h3>
+            <p>published: {{ post.published_date }}</p>
+            <h1><a href"">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+
     <div>
         <h1><a href="https://my.dgist.ac.kr">DGIST Portal</a></h1>
     </div>
